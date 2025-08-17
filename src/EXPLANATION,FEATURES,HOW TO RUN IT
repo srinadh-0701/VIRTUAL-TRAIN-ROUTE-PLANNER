@@ -1,0 +1,83 @@
+🚆 Virtual Train Route Planner Project
+📌 Explanation
+
+The Virtual Train Route Planner is a console-based system that helps navigate between train stations in real-time.
+It is implemented using doubly linked lists and circular linked lists:
+
+Doubly Linked List → allows moving forward (next station) and backward (previous station) along a train route.
+
+Circular Linked List → handles loop routes where the train comes back to the first station (like metro or ring railways).
+
+This project simulates how a traveler can move along train routes, view available stations, and plan their journey.
+
+🚀 Features
+
+✔ Add Station
+  • Insert stations into the route.
+  • Routes can be linear or circular.
+
+✔ Display Route
+  • Shows all stations in order.
+  • For circular routes, last station connects back to the first.
+
+✔ Navigate Forward / Backward
+  • Move to next or previous station (using doubly linked list).
+
+✔ Search Station
+  • Check if a station exists on the route.
+
+✔ Plan Journey
+  • Enter a source and destination, program shows path.
+
+🏗️ How It Works (Core Concepts)
+
+Doubly Linked List: Each node (station) has prev and next pointers, enabling two-way navigation.
+
+Circular Linked List: Last station’s next points to the first, forming a loop.
+
+Traversal Algorithms: Used for route display and journey planning.
+
+⚙️ How to Run
+🔹 Step 1: Navigate to project folder
+cd VirtualTrainPlanner
+
+🔹 Step 2: Compile (C++ version)
+g++ -std=c++17 -O2 -o TrainPlanner src/main.cpp
+
+🔹 Step 3: Run
+./TrainPlanner
+
+🖥️ Sample Output
+==== Virtual Train Route Planner ====
+1. Add station
+2. Display route
+3. Move to next station
+4. Move to previous station
+5. Search station
+6. Plan journey
+0. Exit
+Choose: 1
+Enter station name: Central
+Station Central added.
+
+Choose: 1
+Enter station name: Park
+Station Park added.
+
+Choose: 2
+--- Route ---
+Central -> Park -> (back to Central)
+----------------
+
+Choose: 6
+Source: Central
+Destination: Park
+Journey: Central -> Park
+
+✅ Future Improvements
+
+Add travel times between stations.
+
+Shortest path calculation (graph algorithms like Dijkstra).
+
+GUI-based route visualization
